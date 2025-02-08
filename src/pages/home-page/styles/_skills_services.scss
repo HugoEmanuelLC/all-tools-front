@@ -1,0 +1,85 @@
+#skills_services{
+    background-color: white;
+
+    .container{
+        $padding: 20px;
+
+        max-width: 1420px;
+        margin: 0 auto;
+        padding: 100px 0;
+        @include flex(column, flex-start, center);
+        gap: 50px;
+        flex-wrap: wrap;
+        
+
+        .box_list_skills{
+            // border: solid 1px red;
+            @include flex(row, space-evenly, flex-start);
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 0 $padding;
+            width: 100%;
+            h3{
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: $txt_h3_size_sm;
+                font-weight: $txt_weight_lg;
+
+                &:nth-child(even){
+                    color: gray;
+                }
+            }
+        }
+
+        .box_list{
+            // border: solid 1px green;
+            @include flex(column, center, flex-start);
+            width: 100%;
+            padding: $padding;
+            gap: 20px;
+
+            ul{
+                @include flex(column, flex-start, center);
+                flex-wrap: wrap;
+                // padding: 10px;
+                max-width: 300px;
+
+                li{
+                    width: 100%;
+                    padding: 4px 0;
+                    font-size: $txt_p_size_sm;
+                    font-weight: $txt_weight_lg;
+                    letter-spacing: 0.5px;
+
+                    &::first-letter{
+                        text-transform: uppercase;
+                    }
+                }
+
+                .titreList{
+                    padding: 10px 0;
+                    color: gray;
+                }
+            }
+        }
+
+        @include media-queries(md){
+            gap: 100px;
+            .box_list_skills{
+                h3{
+                    font-size: $txt_h3_size_md;
+                    font-weight: $txt_weight_md;
+                }
+            }
+            .box_list{
+                @include flex(row, space-around, flex-start);
+                flex-wrap: wrap;
+                ul{
+                    li{
+                        font-size: $txt_p_size_md;
+                        font-weight: $txt_weight_md;
+                    }
+                }
+            }
+        }
+    }
+}

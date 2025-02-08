@@ -1,0 +1,60 @@
+
+footer{
+    position: sticky;
+        bottom: 0;
+    background-color: darkred;
+    color: white;
+    padding: 100px 0 20px;
+    @include flex(column, space-around, center);
+    gap: 100px;
+    
+    .infos{
+        @include flex(column, space-around, flex-start);
+        gap: 100px;
+
+        div{
+            @include flex(column, flex-start, flex-start);
+        }
+        
+        ul{
+            @include flex(column, center, flex-start);
+    
+            li:first-child{
+                padding: 0 0 30px;
+                text-decoration: underline 2px solid rgb(172, 172, 172);
+                h3{
+                    font-size: $txt_h3_size_sm;
+                }
+            }
+    
+            li{
+                padding: 0 0 10px;
+    
+                a{
+                    font-size: $txt_p_size_sm;
+                    text-decoration: none;
+                    transition: 0.3s;
+                    color: rgb(172, 172, 172);
+                    &:hover{
+                        color: white;
+                    } 
+                }
+            }
+        }
+    }
+
+    .copyright{
+        text-align: center;
+        font-size: $txt_p_size_sm;
+    }
+
+    @include media-queries(md){
+        .infos{
+            @include flex(row, space-around, flex-start);
+            gap: 0;
+            width: 100%;
+        }
+    }
+    
+
+}
