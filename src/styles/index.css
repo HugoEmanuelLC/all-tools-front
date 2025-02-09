@@ -696,4 +696,32 @@ footer .copyright {
     font-size: 16px;
     font-weight: 400;
   }
+}
+#homePage .about {
+  background-color: white;
+}
+#homePage .about .container .box_about {
+  padding: 10px 0;
+}
+#homePage .about .container .box_about h3 {
+  padding: 10px 0;
+  font-size: 24px;
+  text-transform: capitalize;
+}
+#homePage .about .container .box_about p {
+  padding: 5px 0;
+}
+#homePage .about .container .box_about ul li {
+  margin-bottom: 5px;
+  display: flex;
+  flex-direction: row; /* 'row' par défaut */
+  justify-content: flex-start; /* 'center' par défaut */
+  align-items: center; /* 'stretch' par défaut */
+  gap: 5px;
+}
+#homePage .about .container .box_about ul li h4 {
+  text-transform: capitalize;
+}
+#homePage .about .container .box_about ul li span {
+  font-size: 14px;
 }/*# sourceMappingURL=index.css.map */

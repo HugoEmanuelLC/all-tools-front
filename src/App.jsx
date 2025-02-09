@@ -9,7 +9,7 @@ import Header from './components/header-component/header';
 import Footer from './components/footer-component/footer';
 
 //Pages
-import Home from './pages/home-page/home';
+import HomePage from './pages/home-page/home-page';
 import NotFound from './pages/not-found-page/not-found';
 
 // Pages Authentication
@@ -61,11 +61,11 @@ function App() {
 
       {/* routes */}
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<HomePage />} />
         
-        <Route path="/login" element={ checkAuth == false ? <Authentication url="login" /> : <Home />} />
-        <Route path="/register" element={ checkAuth == false ? <Authentication url="register" /> : <Home />} />
-        <Route path="/forgot-password" element={ checkAuth == false ? <Authentication url="forgot-password" /> : <Home />} />
+        <Route path="/login" element={ checkAuth == false ? <Authentication url="login" /> : <HomePage />} />
+        <Route path="/register" element={ checkAuth == false ? <Authentication url="register" /> : <HomePage />} />
+        <Route path="/forgot-password" element={ checkAuth == false ? <Authentication url="forgot-password" /> : <HomePage />} />
         
         <Route path="/verify-link" element={ <VerifyLink /> } />
         <Route path="/page-1" element={ checkAuth ? <h1>page visible seulement avec authentification</h1> : <NotFound /> } />

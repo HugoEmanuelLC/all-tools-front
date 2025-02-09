@@ -1,0 +1,42 @@
+.about{
+    background-color: white;
+
+    .container{
+
+        .box_about{
+            // border: solid 2px red;
+            padding: 10px 0;
+            h3{
+                padding: 10px 0;
+                font-size: $txt_h3_size_md;
+                text-transform: capitalize;
+            }
+
+            p{
+                padding: 5px 0;
+            }
+
+            ul{
+                li{
+                    // border: solid 2px red;
+                    margin-bottom: 5px;
+                    @include flex(row, flex-start, center);
+                    gap: 5px;
+
+                    h4{
+                        text-transform: capitalize;
+                    }
+                    
+                    span{
+                        // border: solid 2px green;
+                        font-size: $txt_p_size_sm;
+                    }
+                }
+            }
+
+            @include media-queries(md){
+                
+            }
+        }
+    }
+}

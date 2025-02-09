@@ -8,6 +8,9 @@ import { Splide, SplideSlide, SplideTrack } from '@splidejs/react-splide';
 // slider images
 import '@splidejs/react-splide/css';
 
+// scripts
+import { createParagraphs } from '../../../../scripts/global_functions.js';
+
 
 /**
     @Gallery_projects:
@@ -73,12 +76,7 @@ export function Project_item({children}){
     const [description, setDescription] = useState([]);
 
     useEffect(() => {
-        // children.description.includes(".") && console.log("voir projet")
-        let tab = children.description.split(".");
-        tab = tab.filter((el) => el !== "")
-        let newTab = [];
-        tab.forEach((el) => newTab.push(el.trim()+".") );
-        setDescription(newTab);
+        setDescription(createParagraphs(children.description));
     }, [children.description]);
 
     return(
@@ -101,6 +99,7 @@ export function Project_item({children}){
                             <div className="infos">
                                 <h3 className="title">{children.title}</h3>
                                 {/* <p className="description">{children.description}</p> */}
+
                                 <div className="description">
                                     {description?.map((el, index) => 
                                         <p key={index} >{el}</p>
@@ -136,3 +135,4 @@ export function Project_item({children}){
     );
     
 }
+

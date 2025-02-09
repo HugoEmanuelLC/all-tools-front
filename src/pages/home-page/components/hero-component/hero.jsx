@@ -15,7 +15,6 @@ function Hero() {
         });
 
         loadingImage == null ? setLoadingImage({bg2}) : null;
-        console.log("loadingImage hero : ", loadingImage)
 
     }, [loadingImage])
 

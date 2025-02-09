@@ -9,7 +9,7 @@ import pcBacg from '/pcBacg.webp';
 import orange_white from '/orange-white.webp';
 import front from '/front.webp';
 
-
+import AboutComponent from "./components/about-component/about-component";
 
 // images projet wawmomo
 import bckg_wawmomo from '/bckg-wawmomo.webp';
@@ -25,15 +25,19 @@ function Home() {
     const [loadingImage, setLoadingImage] = useState(null);
 
     useEffect(() => {
+        loadingImage == null ? setLoadingImage({ecran, front, orange_white}) : null;
+        // console.log("loadingImage home : ", loadingImage)
+    }, [loadingImage])
+
+
+    useEffect(() => {
         AOS.init({
             duration: 1000,
             delai: 500,
             easing: 'ease-in-out',
         });
-
-        loadingImage == null ? setLoadingImage({ecran, front, orange_white}) : null;
-        console.log("loadingImage home : ", loadingImage)
-    }, [loadingImage])
+    }, [])
+    
 
     return (
         <div id="homePage">
@@ -208,6 +212,12 @@ function Home() {
                     }}</Project_item> */}
                 {/* </Gallery_projects> */}
 
+
+                
+
+                <AboutComponent />
+
+
                 <section className="section_box_space">
                     <div className="box_space " style={{"backgroundImage": "url('"+orange_white+"')"}}>
                         <div className="box_shadow with_title">
@@ -247,36 +257,6 @@ function Home() {
                     }}</Project_item>
                 </Gallery_projects>
             </div>
-
-            
-            
-            {/* <div className="sticky_box">
-                <div className="titreH2 sticky " style={{"backgroundImage": "url("  + ")"}}>
-                    <h2>Services</h2>
-                </div>
-
-                <div className="big ">
-                    <div className="big_content container" >
-
-                        <div className="box_list" >
-                            <ul>
-                                <li className="titreList"><h3>Développement</h3></li>
-                                <li className="list">Site web</li>
-                                <li className="list">Application web</li>
-                                <li className="list">mobile</li>
-                            </ul>
-                        </div>
-                        
-                        <div className="box_list">
-                            <ul>
-                                <li className="titreList"><h3>Cartographie</h3></li>
-                                <li className="list">Exploration des données</li>
-                                <li className="list">Affichage des datas</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div> */}
         </div>
     )
 }
