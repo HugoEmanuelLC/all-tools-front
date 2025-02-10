@@ -1,15 +1,18 @@
 header{
-    background-color: black;
-    color: white;
-    @include flex(row, center, center);
+    background-color: $color_primary;
+    color: $color_tertiary;
+    @include flex(row, space-between, center);
     position: sticky;
         top: 0;
         left: 0;
         right: 0;
         z-index: 1000;
+        
+    
+        // border: solid 2px red;
     
     .logo{
-        background-color: darkred;
+        // background-color: $color_tertiary;
         @include flex(row, center, center);
 
         span{
@@ -21,9 +24,26 @@ header{
     }
 
     @include media-queries(md){
+
+        padding-bottom: 10px;
+        
+        .underline{
+            position: absolute;
+                bottom: 2px;
+                left: 0;
+                right: 0;
+                z-index: -1;
+            height: 1px;
+            width: calc(100% - 20px);
+            border-radius: 50%;
+            margin: 0 auto;
+            background-color: $color_tertiary_opo;
+        }
+
         .logo{
             span{
-                font-size: 24px;
+                font-size: $txt_p_size_md;
+                font-weight: $txt_weight_sm;
             }
         }
     }

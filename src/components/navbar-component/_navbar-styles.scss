@@ -4,7 +4,7 @@ $fondColor: rgba(0, 0, 0, $fondColorOpac);
 
 .box_btns_navbar{
     // background-color: darkred;
-    background-color: black;
+    background-color: $color_primary;
     border-radius: 50% 0 50% 50%;
     @include flex(column, center, center);
     position: fixed;
@@ -16,13 +16,17 @@ $fondColor: rgba(0, 0, 0, $fondColorOpac);
     transition: 0.3s;
 
     &:hover{
-        background-color: $fondColor;
+        background-color: $color_primary_opo;
         transition: 0.3s;
+
+        i{
+            color: white;
+        }
     }
     
     i{
         position: absolute;
-        color: white;
+        color: black;
         font-size: 40px;
         border-radius: 50%;
         cursor: pointer;
@@ -33,6 +37,7 @@ $fondColor: rgba(0, 0, 0, $fondColorOpac);
     }
 
     @include media-queries(md){
+        display: none;
         height: 70px;
         width: 70px;
         cursor: pointer;
@@ -65,17 +70,18 @@ $fondColor: rgba(0, 0, 0, $fondColorOpac);
     
 
     ul{
-        background-color: black;
+        background-color: $color_primary;
         @include flex(column, flex-start, center);
         height: 100%;
         min-width: 100vw;
+        // min-width: 100%;
 
         li{
             width: 100%;
 
             a{
-                background-color: black;
-                color: white;
+                // background-color: black;
+                color: $color_tertiary;
                 @include flex(column, center, flex-start);
                 width: 100%;
                 height: 100%;
@@ -87,32 +93,79 @@ $fondColor: rgba(0, 0, 0, $fondColorOpac);
                 padding: 20px;
 
                 &:hover{
-                    transition: 0.3s;
-                    background-color: darkred;
-                    color: gold;
+                    background-color: $color_tertiary;
+                    color: $color_primary;
                     transition: 0.3s;
                 }
                 &.active{
-                    background-color: darkred;
-                    color: gold;
+                    background-color: $color_tertiary;
+                    color: $color_secondary;
                 }
             }
         }
     }
 
     @include media-queries(md){
-        background-color: $fondColor;
+        // border: solid 2px white;
+        position: relative;
+        z-index: 0;
+        // background-color: $fondColor;
+        &.close_nav{
+            width: inherit;
+            // background-color: $fondColor;
+        }
+        padding: 0 0;
+        width: inherit;
+        overflow: visible;
 
         ul{
-            min-width: 0;
-            width: 600px;
-            max-width: 600px;
+            // border: solid 3px red;
+            @include flex(row, space-evenly, center);
+            gap: 50px;
+            // justify-content: space-evenly;
+            // min-width: 0;
+            // width: 600px;
+            // max-width: 600px;
+            padding: 0 10px;
+            min-width: inherit;
 
             li{
+                padding: 0 0;
+                width: inherit;
                 a{
-                    align-items: flex-end;
-                    padding-right: 40px;
-                    text-align: right;
+                    @include flex(row, center, center);
+                    // align-items: flex-end;
+                    // padding-right: 40px;
+                    // text-align: right;
+                    // border: solid 2px green;
+                    padding: 0 0;
+
+                    font-size: $txt_p_size_md;
+                    font-weight: $txt_weight_sm;
+
+                    &:hover{
+                        background-color: transparent;
+                        color: $color_tertiary_opo;
+                        // text-shadow: 2px 2px 5px $color_tertiary;
+                    }
+                    &.active{
+                        background-color: inherit;
+                        color: $color_tertiary;
+                        position: relative;
+
+                        &::before{
+                            content: '';
+                            position: absolute;
+                                bottom: -13px;
+                                // left: 0;
+                                // right: 0;
+                            height: 3px;
+                            border-radius: 50%;
+                            width: 200%;
+                            background: linear-gradient(to right, transparent, $color_secondary, transparent);
+                            box-shadow: 0 0 5px $color_secondary;
+                        }
+                    }
                 }
             }
         }

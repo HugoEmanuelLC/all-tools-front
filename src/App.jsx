@@ -54,10 +54,15 @@ function App() {
   return (
     loading ? <LoadingPage /> : 
     <AppContext.Provider value={{setCheckAuth, setLoading}}>
-      <Header />
-      {/* navbar */}
-      <Navbar checkAuth={checkAuth} handleLoading={handleLoading} 
-      handleDeleteCookie={handleDeleteCookie} setUrlCurrent={setUrlCurrent} />
+      <header className=''>
+        <div className="logo">
+            <span>hugoclavinas</span>
+        </div>
+        <Navbar checkAuth={checkAuth} handleLoading={handleLoading} 
+        handleDeleteCookie={handleDeleteCookie} setUrlCurrent={setUrlCurrent} />
+        
+        <span className='underline'></span>
+      </header>
 
       {/* routes */}
       <Routes>

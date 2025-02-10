@@ -39,12 +39,12 @@ function Navbar(props) {
                 <ul>
                     <li><NavLink onClick={() => handleVerifUrl("/")} to="/">Home</NavLink></li>
                     <li><NavLink onClick={() => handleVerifUrl("/page-1")} to="/page-1">Page-1</NavLink></li>
-                    <li><NavLink onClick={() => handleVerifUrl("/verify-link")} to="/verify-link">Verify-link</NavLink></li>
+                    {/* <li><NavLink onClick={() => handleVerifUrl("/verify-link")} to="/verify-link">Verify-link</NavLink></li> */}
 
                     {/* authentication */}
                     {props.checkAuth == false && <li><NavLink onClick={() => handleVerifUrl("/login")} to="/login">Login</NavLink></li>}
                     {props.checkAuth == false && <li><NavLink onClick={() => handleVerifUrl("/register")} to="/register">Register</NavLink></li>}
-                    {props.checkAuth == false && <li><NavLink onClick={() => handleVerifUrl("/forgot-password")} to="/forgot-password">Forgot Password</NavLink></li>}
+                    {/* {props.checkAuth == false && <li><NavLink onClick={() => handleVerifUrl("/forgot-password")} to="/forgot-password">Forgot Password</NavLink></li>} */}
                     {props.checkAuth == true && <li><button onClick={props.handleDeleteCookie}>Delete Cookie</button></li>}
                 </ul>
             </nav>

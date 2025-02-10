@@ -43,6 +43,11 @@ function Home() {
         <div id="homePage">
 
             <div className="sticky_box">
+
+                <section className="head">
+                    test
+                </section>
+
                 <Hero />
 
                 <section className="section_box_space">

@@ -48,20 +48,6 @@ const texts = [
         title: `objectifs`,
         content: `Je suis à la recherche de nouvelles opportunités pour mettre mes compétences au service de projets ambitieux et stimulants. 
         Je suis ouvert aux collaborations et aux défis, et je suis toujours prêt à apprendre et à me dépasser.`
-    },
-    {
-        title: `contact`,
-        content: `N'hésitez pas à me contacter pour discuter de vos projets ou pour toute question. Je serai ravi de vous répondre et de vous accompagner dans la réalisation de vos idées.`,
-        list: [
-            {
-                titleList: `Gsm:`,
-                contentList: ["0484447341"]
-            },
-            {
-                titleList: `Email:`,
-                contentList: ["hugoclavinas@gmail.com"]
-            }
-        ]
     }
 ]
 

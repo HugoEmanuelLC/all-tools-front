@@ -28,7 +28,7 @@
             $vwSizeDynamic: 12vw;
 
             h2{
-                color: white;
+                color: $color_secondary;
                 font-size: $vwSizeDynamic;
                 line-height: 1;
                 text-transform: uppercase;
@@ -52,7 +52,7 @@
             text-transform: uppercase;
             text-wrap: nowrap;
             position: relative;
-            color: black;
+            color: $color_tertiary_opo;
 
             &::before{
                 content: attr(data-content);
@@ -60,7 +60,7 @@
                     top: 0;
                     left: 0;
                     z-index: -1;
-                -webkit-text-stroke: 5px white;
+                -webkit-text-stroke: 3px $color_secondary;
             }
             
         }

@@ -1,3 +1,7 @@
+.head{
+    background-color: $color_primary;
+}
+
 
 #homePage{
     @import './components/hero-component/hero-styles';
