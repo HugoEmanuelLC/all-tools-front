@@ -4,7 +4,6 @@ import { Routes, Route } from 'react-router-dom';
 
 // Components
 import LoadingPage from './components/loading-component/loading';
-import Navbar from './components/navbar-component/navbar';
 import Header from './components/header-component/header';
 import Footer from './components/footer-component/footer';
 
@@ -53,18 +52,12 @@ function App() {
 
   return (
     loading ? <LoadingPage /> : 
-    <AppContext.Provider value={{setCheckAuth, setLoading}}>
-      <header className=''>
-        <div className="logo">
-            <span>hugoclavinas</span>
-        </div>
-        <Navbar checkAuth={checkAuth} handleLoading={handleLoading} 
-        handleDeleteCookie={handleDeleteCookie} setUrlCurrent={setUrlCurrent} />
-        
-        <span className='underline'></span>
-      </header>
+    <AppContext.Provider value={
+      { setCheckAuth, setLoading, checkAuth, handleDeleteCookie, setUrlCurrent, handleLoading }
+    }>
 
-      {/* routes */}
+      <Header />
+
       <Routes>
         <Route path="/" element={<HomePage />} />
         

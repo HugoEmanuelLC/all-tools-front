@@ -4,9 +4,9 @@ import Hero from "./components/hero-component/hero";
 import LazyLoadImage from "../../components/LazyLoadImage";
 import {Gallery_projects, Project_item} from "./components/gallery-component/gallery_projects";
 
-import ecran from '/ecran.webp';
 import pcBacg from '/pcBacg.webp';
 import orange_white from '/orange-white.webp';
+import ecran from '/ecran.webp';
 import front from '/front.webp';
 
 import AboutComponent from "./components/about-component/about-component";
@@ -44,62 +44,14 @@ function Home() {
 
             <div className="sticky_box">
 
-                <section className="head">
-                    test
-                </section>
+                {/* <section className="head ">
+                    <h1>développeur web apps</h1>
+                    <h2>sites web</h2>
+                    <h2>applications web</h2>
+                    <h2>api's</h2>
+                </section> */}
 
                 <Hero />
-
-                <section className="section_box_space">
-                    <div className="box_space " style={loadingImage?.ecran ? {"backgroundImage": "url('"+loadingImage.ecran+"')"} : {}}>
-                        <div className="box_shadow"></div>
-                    </div>
-
-                    <div className="box_space " style={loadingImage?.front ? {"backgroundImage": "url('"+loadingImage.front+"')"} : {}}>
-                        <div className="box_shadow"></div>
-                    </div>
-
-                    {/* <LazyLoadImage
-                        src={ecran}
-                        alt="Description de l'image"
-                        className="box_space "
-                        >
-                        <div className="box_shadow"></div>
-                    </LazyLoadImage>
-
-                    <LazyLoadImage
-                        src={front}
-                        alt="Description de l'image"
-                        className="box_space "
-                        >
-                            <div className="box_shadow"></div>
-                    </LazyLoadImage> */}
-
-
-
-                    {/* <div className="box_space">
-                        <LazyLoadImage
-                            src={ecran}
-                            effect="blur"
-                            className="box_space_img"
-                            height="100%"
-                            width="100%"
-                            style={{"objectFit": "cover", "position": "fixed", "top": "0", "left": "0", "zIndex": "-1"}}
-                            alt="fond ecran de la section hero"
-                        />
-                        <div className="box_shadow"></div>
-                    </div> */}
-
-                    
-                </section>
-
-                {/* <div className="box_space sticky"  ></div> */}
-
-                {/* indecit */}
-
-                {/* <div className="titreH2 sticky" style={{"backgroundImage": "url("  + ")"}}>
-                    <h2>a propos</h2>
-                </div> */}
 
 
                 <section id="skills_services" className=" ">
@@ -155,6 +107,8 @@ function Home() {
                         </div>
                     </div>
                 </section>
+
+
                 <div className="div5px"></div>
 
 
@@ -189,38 +143,10 @@ function Home() {
                     }}</Project_item>
                 </Gallery_projects>
 
-                {/* <Gallery_projects> */}
-                    {/* <Project_item>{{
-                        imgTab: [],
-                        title: "ce site web - hugoclavinas.com",
-                        description: `Conception et développement d'un site web dynamique et interactif, 
-                        intégrant des fonctionnalités avancées telles que l'authentification des utilisateurs et un système de réservation en ligne. 
-                        Ce projet démontre ma capacité à créer des solutions web complètes et fonctionnelles, 
-                        en utilisant des technologies modernes et des plugins performants.`,
-                        btnOrTagA: "disabled",
-                        linkTxt: "inactive",
-                        linkHref: "",
-                        fnc: () => {}
-                    }}</Project_item> */}
-                    
-                    {/* <Project_item>{{
-                        img1: bckg_wawmomo,
-                        img2: bckg_wawmomo_dash,
-                        title: "Sandwicherie",
-                        description: `description. description. description.`,
-                        btnOrTagA: "button",
-                        linkTxt: "en savoir plus",
-                        linkHref: "",
-                        fnc: () => alert(`
-                            Pas de projet pour le moment!     
-                        `)
-                    }}</Project_item> */}
-                {/* </Gallery_projects> */}
-
-
+                <div className="div5px"></div>
                 
 
-                <AboutComponent />
+                {/* <AboutComponent /> */}
 
 
                 <section className="section_box_space">
@@ -230,6 +156,7 @@ function Home() {
                         </div>
                     </div>
                 </section>
+
                 <div className="div5px"></div>
 
                 <Gallery_projects>
@@ -261,6 +188,8 @@ function Home() {
                         `)
                     }}</Project_item>
                 </Gallery_projects>
+
+                <div className="div5px"></div>
             </div>
         </div>
     )

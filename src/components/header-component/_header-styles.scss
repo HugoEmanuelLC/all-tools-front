@@ -1,7 +1,9 @@
+@import './components/navbar-component/navbar-styles';
+
 header{
     background-color: $color_primary;
     color: $color_tertiary;
-    @include flex(row, space-between, center);
+    @include flex(row, center, center);
     position: sticky;
         top: 0;
         left: 0;
@@ -12,29 +14,30 @@ header{
         // border: solid 2px red;
     
     .logo{
-        // background-color: $color_tertiary;
         @include flex(row, center, center);
 
         span{
-            font-size: 18px;
-            font-weight: 900;
-            padding: 5px 10px;
+            font-size: $txt_h3_size_sm;
+            font-weight: $txt_weight_md;
             text-transform: uppercase;
+            padding: 5px $padding_sm;
         }
     }
 
     @include media-queries(md){
+        @include flex(row, space-between, center);
 
         padding-bottom: 10px;
+        // border: solid 2px red;
         
         .underline{
             position: absolute;
-                bottom: 2px;
+                bottom: 6px;
                 left: 0;
                 right: 0;
                 z-index: -1;
             height: 1px;
-            width: calc(100% - 20px);
+            width: calc(100% - $padding_md*2);
             border-radius: 50%;
             margin: 0 auto;
             background-color: $color_tertiary_opo;
@@ -43,7 +46,8 @@ header{
         .logo{
             span{
                 font-size: $txt_p_size_md;
-                font-weight: $txt_weight_sm;
+                // font-weight: $txt_weight_sm;
+                padding: 5px $padding_md;
             }
         }
     }

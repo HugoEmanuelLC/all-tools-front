@@ -1,5 +1,5 @@
 #skills_services{
-    background-color: white;
+    // background-color: white;
 
     .container{
         $padding: 20px;
@@ -23,6 +23,7 @@
                 font-family: Arial, Helvetica, sans-serif;
                 font-size: $txt_h3_size_sm;
                 font-weight: $txt_weight_lg;
+                color: $color_tertiary;
 
                 &:nth-child(even){
                     color: gray;
@@ -46,9 +47,10 @@
                 li{
                     width: 100%;
                     padding: 4px 0;
-                    font-size: $txt_p_size_sm;
+                    font-size: $txt_p_size_md;
                     font-weight: $txt_weight_lg;
                     letter-spacing: 0.5px;
+                    color: $color_tertiary;
 
                     &::first-letter{
                         text-transform: uppercase;
@@ -58,6 +60,7 @@
                 .titreList{
                     padding: 10px 0;
                     color: gray;
+                    font-size: $txt_h3_size_md;
                 }
             }
         }

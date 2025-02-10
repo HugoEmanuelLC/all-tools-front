@@ -1,6 +1,6 @@
 .gallery_projects{
     // border: solid 3px red;
-    background-color: white;
+    // background-color: white;
     @include flex(column, center, center);
 
     .container{
@@ -50,8 +50,8 @@
             }
 
             .infos{
-                border: solid 1px darkred;
-                background-color: white;
+                border: solid 1px $color_tertiary;
+                // background-color: red;
                 backdrop-filter: blur(2px);
                 position: absolute;
                     top: 0;
@@ -83,8 +83,8 @@
                     }
                 }
                 .button{
-                    background-color: black;
-                    color: white;
+                    background-color: $color_tertiary;
+                    color: $color_secondary;
                     border-radius: 25px 0 25px 25px;
                     font-size: $txt_p_size_md;
                     font-weight: $txt_weight_lg;
@@ -94,8 +94,8 @@
                     cursor: pointer;
     
                     &:hover{
-                        background-color: #F7A63D;
-                        color: black;
+                        background-color: $color_secondary;
+                        color: $color_tertiary;
                         transition: 0.3s;
                     }
                 }

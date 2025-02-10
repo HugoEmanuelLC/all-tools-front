@@ -1,5 +1,6 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef, useEffect, useState, useContext } from 'react';
 import { NavLink } from 'react-router-dom';
+import AppContext from '../../../../hooks/app-context';
 
 
 function Navbar(props) {
@@ -7,6 +8,8 @@ function Navbar(props) {
     const navBar = useRef()
     const btn_open = useRef()
     const btn_close = useRef()
+
+    const { checkAuth, handleLoading, handleDeleteCookie } = useContext(AppContext)
 
     const openAndCloseNavBar = () => {
         navBar.current.classList.toggle('close_nav')
@@ -21,7 +24,7 @@ function Navbar(props) {
     
     const handleVerifUrl = (url) => {
         let pathname = window.location.pathname
-        pathname != url && props.handleLoading()
+        pathname != url && handleLoading()
 
         // si loading n'st pas en cours
         // pathname != url && navBar.current.classList.toggle('close_nav')
@@ -42,10 +45,10 @@ function Navbar(props) {
                     {/* <li><NavLink onClick={() => handleVerifUrl("/verify-link")} to="/verify-link">Verify-link</NavLink></li> */}
 
                     {/* authentication */}
-                    {props.checkAuth == false && <li><NavLink onClick={() => handleVerifUrl("/login")} to="/login">Login</NavLink></li>}
-                    {props.checkAuth == false && <li><NavLink onClick={() => handleVerifUrl("/register")} to="/register">Register</NavLink></li>}
-                    {/* {props.checkAuth == false && <li><NavLink onClick={() => handleVerifUrl("/forgot-password")} to="/forgot-password">Forgot Password</NavLink></li>} */}
-                    {props.checkAuth == true && <li><button onClick={props.handleDeleteCookie}>Delete Cookie</button></li>}
+                    {checkAuth == false && <li><NavLink onClick={() => handleVerifUrl("/login")} to="/login">Login</NavLink></li>}
+                    {checkAuth == false && <li><NavLink onClick={() => handleVerifUrl("/register")} to="/register">Register</NavLink></li>}
+                    {/* {checkAuth == false && <li><NavLink onClick={() => handleVerifUrl("/forgot-password")} to="/forgot-password">Forgot Password</NavLink></li>} */}
+                    {checkAuth == true && <li><button onClick={handleDeleteCookie}>Delete Cookie</button></li>}
                 </ul>
             </nav>
         </>

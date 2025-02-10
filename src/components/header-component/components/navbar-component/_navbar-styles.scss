@@ -126,7 +126,7 @@ $fondColor: rgba(0, 0, 0, $fondColorOpac);
             // min-width: 0;
             // width: 600px;
             // max-width: 600px;
-            padding: 0 10px;
+            padding: 0 $padding_md;
             min-width: inherit;
 
             li{
@@ -134,10 +134,6 @@ $fondColor: rgba(0, 0, 0, $fondColorOpac);
                 width: inherit;
                 a{
                     @include flex(row, center, center);
-                    // align-items: flex-end;
-                    // padding-right: 40px;
-                    // text-align: right;
-                    // border: solid 2px green;
                     padding: 0 0;
 
                     font-size: $txt_p_size_md;
@@ -156,10 +152,10 @@ $fondColor: rgba(0, 0, 0, $fondColorOpac);
                         &::before{
                             content: '';
                             position: absolute;
-                                bottom: -13px;
+                                bottom: -10px;
                                 // left: 0;
                                 // right: 0;
-                            height: 3px;
+                            height: 4px;
                             border-radius: 50%;
                             width: 200%;
                             background: linear-gradient(to right, transparent, $color_secondary, transparent);

@@ -25,25 +25,26 @@
 
         .h2_box{
             
-            $vwSizeDynamic: 12vw;
+            $vwSizeDynamic: 9vw;
 
             h2{
                 color: $color_secondary;
-                font-size: $vwSizeDynamic;
+                font-size: min(100px, $vwSizeDynamic);
                 line-height: 1;
                 text-transform: uppercase;
-                font-weight: 900;
+                font-weight: $txt_h3_size_md;
                 text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
             }
         }
     }
 
     
-    .titre{
+    .titre_animation{
         display: flex;
         align-items: center; 
         overflow: hidden;
         flex: 1;
+        top: 100px;
         h1{
             flex-wrap: nowrap;
             text-align: center;
@@ -52,7 +53,7 @@
             text-transform: uppercase;
             text-wrap: nowrap;
             position: relative;
-            color: $color_tertiary_opo;
+            color: $color_tertiary;
 
             &::before{
                 content: attr(data-content);
@@ -88,8 +89,11 @@
                 }
             }
         }
-        .titre{
+        .titre_animation{
             margin-bottom: 0px;
+            h1{
+                color: $color_tertiary_opo;
+            }
         }
     }
 
