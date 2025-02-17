@@ -1,23 +1,18 @@
 // Dependencies
 import {useEffect, useState} from 'react';
 // Images
-import fondEcran from '/fondEcran.webp';
-import bg2 from '/bg2.webp';
-import ecran from '/ecran.webp';
-import front from '/front.webp';
+import fondEcran from '/home/fondEcran.webp';
+import bg2 from '/home/bg2.webp';
+
+// import front from '/home/front.webp';
 
 
 function Hero() {
     const [loadingImage, setLoadingImage] = useState(null);
 
     useEffect(() => {
-        AOS.init({
-            duration: 1000,
-            delai: 500,
-            easing: 'ease-in-out',
-        });
 
-        loadingImage == null ? setLoadingImage({bg2, ecran, front, fondEcran}) : null;
+        loadingImage == null ? setLoadingImage({bg2, fondEcran}) : null;
 
     }, [loadingImage])
 
@@ -28,9 +23,9 @@ function Hero() {
                 <div className="box_shadow">
                     <div className="intitule " >
                         <div className="h2_box" >
-                            <h2>sites web</h2>
-                            <h2>applications web</h2>
-                            <h2>api's</h2>
+                            <h2 data-aos="zoom-out-up">sites web</h2>
+                            <h2 data-aos="zoom-out-up">applications web</h2>
+                            <h2 data-aos="zoom-out-up">api's</h2>
                         </div>
                     </div>
 
@@ -42,7 +37,7 @@ function Hero() {
 
 
 
-            <div className="box_space " style={loadingImage?.ecran ? {"backgroundImage": "url('"+loadingImage?.fondEcran+"')"} : {}}>
+            <div className="box_space " style={loadingImage?.fondEcran ? {"backgroundImage": "url('"+loadingImage?.fondEcran+"')"} : {}}>
                 <div className="box_shadow"></div>
             </div>
 

@@ -32,12 +32,12 @@ function Navbar(props) {
     
     return (
         <>
-            <div className="box_btns_navbar" onClick={openAndCloseNavBar}>
+            <div className="box_btns_navbar displayNone" onClick={openAndCloseNavBar}>
                 <i ref={btn_open} className='btn_open bx bx-menu-alt-right'></i>
                 <i ref={btn_close} className='btn_close bx bx-x'></i>
             </div>
 
-            <nav ref={navBar} className="navbar close_nav">
+            <nav ref={navBar} className="navbar close_nav displayNone">
                 {/* navigation */}
                 <ul>
                     <li><NavLink onClick={() => handleVerifUrl("/")} to="/">Home</NavLink></li>

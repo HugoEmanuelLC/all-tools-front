@@ -1,3 +1,8 @@
+#body_content{
+    background-color: $color_tertiary;
+    min-height: 100vh;
+}
+
 .txt_animation{
     animation: txt_animation 2s ease-in-out;
     @keyframes txt_animation{

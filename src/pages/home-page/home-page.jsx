@@ -1,38 +1,36 @@
 import React, {useEffect, useState} from "react";
 
 import Hero from "./components/hero-component/hero";
-import LazyLoadImage from "../../components/LazyLoadImage";
+// import LazyLoadImage from "../../components/LazyLoadImage";
 import {Gallery_projects, Project_item} from "./components/gallery-component/gallery_projects";
 
-import pcBacg from '/pcBacg.webp';
-import orange_white from '/orange-white.webp';
-import ecran from '/ecran.webp';
-import front from '/front.webp';
+// import AboutComponent from "./components/about-component/about-component";
 
-import AboutComponent from "./components/about-component/about-component";
+import orange_white from '/home/orange-white.webp';
+// import front from '/home/front.webp';
 
 // images projet wawmomo
-import bckg_wawmomo from '/bckg-wawmomo.webp';
-import bckg_wawmomo_dash from '/bckg-wawmomo-dash.webp';
+import bckg_wawmomo from '/home/bckg-wawmomo.webp';
+import bckg_wawmomo_dash from '/home/bckg-wawmomo-dash.webp';
 
 // images projet lex&co
-import lexandco1 from '/lexandco1.webp';
-import lexandco2 from '/lexandco2.webp';
-import lexandco3 from '/lexandco3.webp';
+import lexandco1 from '/home/lexandco1.webp';
+import lexandco2 from '/home/lexandco2.webp';
+import lexandco3 from '/home/lexandco3.webp';
 
 
 function Home() {
     const [loadingImage, setLoadingImage] = useState(null);
 
     useEffect(() => {
-        loadingImage == null ? setLoadingImage({ecran, front, orange_white}) : null;
+        loadingImage == null ? setLoadingImage({orange_white}) : null;
         // console.log("loadingImage home : ", loadingImage)
     }, [loadingImage])
 
 
     useEffect(() => {
         AOS.init({
-            duration: 1000,
+            duration: 700,
             delai: 500,
             easing: 'ease-in-out',
         });
@@ -58,26 +56,26 @@ function Home() {
                     <div className="container">
 
                         <div className="box_list_skills">
-                            <h3>Html5 / Sass</h3>
-                            <h3>React js</h3>
-                            <h3>Node js / Express js</h3>
-                            <h3>MySql / Mongodb</h3>
+                            <h3 data-aos="zoom-out-up">Html5 / Sass</h3>
+                            <h3 data-aos="zoom-out-up">React js</h3>
+                            <h3 data-aos="zoom-out-up">Node js / Express js</h3>
+                            <h3 data-aos="zoom-out-up">MySql / Mongodb</h3>
                         </div>
 
                         <div className="box_list">
-                            <ul>
+                            <ul data-aos="zoom-out-up">
                                 <li className="titreList">Á propos</li>
                                 <li>Je m'appelle Hugo Lopes Clavinas, et depuis 2020, je me suis lancé dans une reconversion professionnelle passionnante: le développement web et d'applications.</li>
                                 <li>je suis animé par la volonté de créer des solutions digitales innovantes et performantes.</li>
                             </ul>
 
-                            <ul>
+                            <ul data-aos="zoom-out-up">
                                 <li className="titreList">parcours</li>
                                 <li>Après une première partie de carrière dans [domaine précédent], j'ai décidé de me tourner vers le développement web, un domaine qui me passionne depuis longtemps.</li>
                                 <li>J'ai suivi une formation intensive et continue de me perfectionner au quotidien, en explorant les dernières technologies et en réalisant des projets concrets.</li>
                             </ul>
 
-                            <ul>
+                            <ul data-aos="zoom-out-up">
                                 <li className="titreList">competences</li>
                                 <li>Je suis compétent dans le développement de sites web et d'applications, avec une expertise particulière dans les technologies suivantes:</li>
                                 <li>Front-End Development (HTML, CSS, JavaScript, React js)</li>
@@ -86,25 +84,25 @@ function Home() {
                                 <li>Autres (GitHub, DNS)</li>
                             </ul>
 
-                            <ul>
+                            <ul data-aos="zoom-out-up">
                                 <li className="titreList">projets</li>
                                 <li>J'ai déjà réalisé plusieurs projets, des sites web vitrines, applications web, applications mobiles, API's, qui m'ont permis de mettre en pratique mes compétences et de développer mon expérience.</li>
                                 <li>Vous pouvez consulter mon portfolio pour en savoir plus sur mes réalisations.</li>
                             </ul>
 
-                            <ul>
+                            <ul data-aos="zoom-out-up">
                                 <li className="titreList">motivations</li>
                                 <li>Je suis convaincu que le développement web est un outil puissant pour créer des solutions qui facilitent la vie des gens et qui contribuent à améliorer le monde.</li>
                                 <li>Je suis passionné par l'idée de pouvoir utiliser mes compétences pour réaliser des projets qui ont un impact positif.</li>
                             </ul>
 
-                            <ul>
+                            <ul data-aos="zoom-out-up">
                                 <li className="titreList">objectifs</li>
                                 <li>Je suis à la recherche de nouvelles opportunités pour mettre mes compétences au service de projets ambitieux et stimulants.</li>
                                 <li>Je suis ouvert aux collaborations et aux défis, et je suis toujours prêt à apprendre et à me dépasser.</li>
                             </ul>
                             
-                            <ul>
+                            <ul data-aos="zoom-out-up">
                                 <li className="titreList">Location</li>
                                 <li>province: brabant wallon</li>
                                 <li>city: Braine-L'Alleud</li>
@@ -117,7 +115,7 @@ function Home() {
                 <section className="section_box_space">
                     <div className="box_space " style={loadingImage?.orange_white ? {"backgroundImage": "url('"+loadingImage.orange_white+"')"} : {}}>
                         <div className="box_shadow with_title">
-                            <h3>realisations</h3>
+                            <h3 data-aos="zoom-out-up">realisations</h3>
                         </div>
                     </div>
                 </section>
@@ -164,9 +162,9 @@ function Home() {
 
 
                 <section className="section_box_space">
-                    <div className="box_space " style={{"backgroundImage": "url('"+orange_white+"')"}}>
+                    <div className="box_space " style={loadingImage?.orange_white ? {"backgroundImage": "url('"+loadingImage.orange_white+"')"} : {}}>
                         <div className="box_shadow with_title">
-                            <h3>PLUGINS</h3>
+                            <h3 data-aos="zoom-out-up">PLUGINS</h3>
                         </div>
                     </div>
                 </section>

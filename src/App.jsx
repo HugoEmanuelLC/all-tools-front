@@ -56,22 +56,24 @@ function App() {
       { setCheckAuth, setLoading, checkAuth, handleDeleteCookie, setUrlCurrent, handleLoading }
     }>
 
-      <Header />
+      <div id="body_content">
+        <Header />
 
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        
-        <Route path="/login" element={ checkAuth == false ? <Authentication url="login" /> : <HomePage />} />
-        <Route path="/register" element={ checkAuth == false ? <Authentication url="register" /> : <HomePage />} />
-        <Route path="/forgot-password" element={ checkAuth == false ? <Authentication url="forgot-password" /> : <HomePage />} />
-        
-        <Route path="/verify-link" element={ <VerifyLink /> } />
-        <Route path="/page-1" element={ checkAuth ? <h1>page visible seulement avec authentification</h1> : <NotFound /> } />
-        
-        <Route path="/*" element={ <NotFound /> } />
-      </Routes>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          
+          <Route path="/login" element={ checkAuth == false ? <Authentication url="login" /> : <HomePage />} />
+          <Route path="/register" element={ checkAuth == false ? <Authentication url="register" /> : <HomePage />} />
+          <Route path="/forgot-password" element={ checkAuth == false ? <Authentication url="forgot-password" /> : <HomePage />} />
+          
+          <Route path="/verify-link" element={ <VerifyLink /> } />
+          <Route path="/page-1" element={ checkAuth ? <h1>page visible seulement avec authentification</h1> : <NotFound /> } />
+          
+          <Route path="/*" element={ <NotFound /> } />
+        </Routes>
 
-      <Footer />
+        <Footer />
+      </div>
     </AppContext.Provider>
   )
 }

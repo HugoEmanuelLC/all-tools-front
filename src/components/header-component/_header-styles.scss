@@ -11,10 +11,11 @@ header{
         z-index: 1000;
         
     
-        // border: solid 2px red;
-    
+        
     .logo{
+        // border: solid 2px red;
         @include flex(row, center, center);
+        width: 90px;
 
         span{
             @include flex(row, center, center);
@@ -33,8 +34,10 @@ header{
             $taille: 45px;
             height: $taille;
             width: $taille;
-            border-radius: 50% 0 50% 50%;
+            border-radius: 50%;
             opacity: 0.8;
+
+            text-shadow: 2px 2px 2px $color_tertiary;
         }
     }
 
@@ -58,11 +61,15 @@ header{
         // }
 
         .logo{
-            span{
+            margin: 0 $padding_md;
+            // span{
                 // font-size: $txt_h3_size_md;
                 // font-weight: $txt_weight_lg;
-                margin: 0 $padding_md;
-            }
+            // }
         }
+    }
+
+    .displayNone{
+        display: none;
     }
 }

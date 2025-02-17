@@ -4,7 +4,7 @@ function Header() {
     return (
         <header className='sticky'>
             <div className="logo">
-                <span>HLC</span>
+                <span>Clavinas.com</span>
             </div>
 
             <Navbar />
