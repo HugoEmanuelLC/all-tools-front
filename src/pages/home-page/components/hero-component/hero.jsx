@@ -1,7 +1,7 @@
 // Dependencies
 import {useEffect, useState} from 'react';
 // Images
-import pcBacg from '/pcBacg.webp';
+import fondEcran from '/fondEcran.webp';
 import bg2 from '/bg2.webp';
 import ecran from '/ecran.webp';
 import front from '/front.webp';
@@ -17,7 +17,7 @@ function Hero() {
             easing: 'ease-in-out',
         });
 
-        loadingImage == null ? setLoadingImage({bg2, ecran, front}) : null;
+        loadingImage == null ? setLoadingImage({bg2, ecran, front, fondEcran}) : null;
 
     }, [loadingImage])
 
@@ -42,13 +42,13 @@ function Hero() {
 
 
 
-            <div className="box_space " style={loadingImage?.ecran ? {"backgroundImage": "url('"+loadingImage.ecran+"')"} : {}}>
+            <div className="box_space " style={loadingImage?.ecran ? {"backgroundImage": "url('"+loadingImage?.fondEcran+"')"} : {}}>
                 <div className="box_shadow"></div>
             </div>
 
-            <div className="box_space " style={loadingImage?.front ? {"backgroundImage": "url('"+loadingImage.front+"')"} : {}}>
+            {/* <div className="box_space " style={loadingImage?.front ? {"backgroundImage": "url('"+loadingImage.front+"')"} : {}}>
                 <div className="box_shadow"></div>
-            </div>
+            </div> */}
         </section>
 
         {/* <section className="section_box_space">

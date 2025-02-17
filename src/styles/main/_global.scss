@@ -43,7 +43,7 @@ section{
     // padding-bottom: 5px;
 }
 .box_space{
-    height: 50vh;
+    height: 60vh;
     width: 100%;
     // padding: 5px;
     
@@ -54,7 +54,7 @@ section{
     background-repeat: no-repeat;
 
     @include media-queries(md){
-        height: 75vh;
+        height: 80vh;
         // background-size: min(1420px, 100%);
     }
 }

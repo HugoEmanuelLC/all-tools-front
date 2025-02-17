@@ -4,7 +4,7 @@ $fondColor: rgba(0, 0, 0, $fondColorOpac);
 
 .box_btns_navbar{
     // background-color: darkred;
-    background-color: $color_primary;
+    background-color: $color_tertiary;
     border-radius: 50% 0 50% 50%;
     @include flex(column, center, center);
     position: fixed;
@@ -16,17 +16,17 @@ $fondColor: rgba(0, 0, 0, $fondColorOpac);
     transition: 0.3s;
 
     &:hover{
-        background-color: $color_primary_opo;
+        background-color: $color_tertiary_opo;
         transition: 0.3s;
 
         i{
-            color: white;
+            color: $color_secondary;
         }
     }
     
     i{
         position: absolute;
-        color: black;
+        color: $color_primary;
         font-size: 40px;
         border-radius: 50%;
         cursor: pointer;
@@ -100,6 +100,7 @@ $fondColor: rgba(0, 0, 0, $fondColorOpac);
                 &.active{
                     background-color: $color_tertiary;
                     color: $color_secondary;
+                    cursor: default;
                 }
             }
         }
@@ -109,6 +110,7 @@ $fondColor: rgba(0, 0, 0, $fondColorOpac);
         // border: solid 2px white;
         position: relative;
         z-index: 0;
+        height: 100%;
         // background-color: $fondColor;
         &.close_nav{
             width: inherit;
@@ -119,48 +121,59 @@ $fondColor: rgba(0, 0, 0, $fondColorOpac);
         overflow: visible;
 
         ul{
-            // border: solid 3px red;
+            // border: solid 3px green;
+            background-color: transparent;
             @include flex(row, space-evenly, center);
-            gap: 50px;
+            // gap: 50px;
             // justify-content: space-evenly;
             // min-width: 0;
             // width: 600px;
             // max-width: 600px;
-            padding: 0 $padding_md;
+            // padding: 0 $padding_md;
             min-width: inherit;
 
             li{
                 padding: 0 0;
                 width: inherit;
+                // border: solid 3px red;
+                width: 100%;
+                height: 100%;
+                @include flex(row, center, center);
                 a{
+                    // background-color: yellow;
+                    // width: 100%;
                     @include flex(row, center, center);
-                    padding: 0 0;
+                    text-wrap: nowrap;
+                    padding: calc($padding_md/1.5) $padding_md;
 
                     font-size: $txt_p_size_md;
                     font-weight: $txt_weight_sm;
+                    color: $color_primary;
 
                     &:hover{
-                        background-color: transparent;
-                        color: $color_tertiary_opo;
+                        background-color: $color_primary;
+                        color: $color_tertiary;
                         // text-shadow: 2px 2px 5px $color_tertiary;
                     }
                     &.active{
-                        background-color: inherit;
-                        color: $color_tertiary;
+                        background-color: $color_tertiary;
+                        color: $color_secondary;
                         position: relative;
 
-                        &::before{
-                            content: '';
-                            position: absolute;
-                                bottom: -10px;
-                                // left: 0;
-                                // right: 0;
-                            height: 4px;
-                            border-radius: 50%;
-                            width: 200%;
-                            background: linear-gradient(to right, transparent, $color_secondary, transparent);
-                            box-shadow: 0 0 5px $color_secondary;
-                        }
+                        // border-radius: 50% 0 50% 50%;
+
+                        // &::before{
+                        //     content: '';
+                        //     position: absolute;
+                        //         bottom: -10px;
+                        //         // left: 0;
+                        //         // right: 0;
+                        //     height: 2px;
+                        //     border-radius: 50%;
+                        //     width: 100%;
+                        //     background: linear-gradient(to right, transparent, $color_secondary, transparent);
+                        //     box-shadow: 0 0 5px $color_secondary;
+                        // }
                     }
                 }
             }

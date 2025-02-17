@@ -17,19 +17,31 @@
     }
 
     .intitule{
-        @include flex(column, center, flex-start);
+        @include flex(column, center, center);
         width: 100%;
         flex: 2;
         overflow: hidden;
         padding: 0 10px;
+        // border: solid 1px red;
 
         .h2_box{
-            
+            // text-align: center;
             $vwSizeDynamic: 9vw;
+
+            h2:nth-child(1){
+                font-size: min(150px, 16vw);
+            }
+            h2:nth-child(2){
+                font-size: min(150px, 9vw);
+            }
+            h2:nth-child(3){
+                font-size: min(150px, 16vw);
+            }
 
             h2{
                 color: $color_secondary;
                 font-size: min(100px, $vwSizeDynamic);
+                line-height: 1;
                 line-height: 1;
                 text-transform: uppercase;
                 font-weight: $txt_h3_size_md;

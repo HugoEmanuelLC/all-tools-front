@@ -67,7 +67,7 @@ img {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #c5c5c5;
+  background-color: rgb(255, 229, 159);
   cursor: grab;
 }
 
@@ -114,7 +114,7 @@ section {
 }
 
 .box_space {
-  height: 50vh;
+  height: 60vh;
   width: 100%;
   background-position: top center;
   background-size: cover;
@@ -123,7 +123,7 @@ section {
 }
 @media (min-width: 769px) {
   .box_space {
-    height: 75vh;
+    height: 80vh;
   }
 }
 
@@ -160,7 +160,7 @@ section {
   align-items: center; /* 'stretch' par défaut */
   height: 100vh;
   width: 100vw;
-  background-color: #c5c5c5;
+  background-color: #3a3a3a;
   position: fixed;
   top: 0;
   left: 0;
@@ -206,7 +206,7 @@ section {
 }
 
 .box_btns_navbar {
-  background-color: #c5c5c5;
+  background-color: #3a3a3a;
   border-radius: 50% 0 50% 50%;
   display: flex;
   flex-direction: column; /* 'row' par défaut */
@@ -221,15 +221,15 @@ section {
   transition: 0.3s;
 }
 .box_btns_navbar:hover {
-  background-color: rgba(197, 197, 197, 0.5);
+  background-color: rgba(58, 58, 58, 0.5);
   transition: 0.3s;
 }
 .box_btns_navbar:hover i {
-  color: white;
+  color: rgb(255, 229, 159);
 }
 .box_btns_navbar i {
   position: absolute;
-  color: black;
+  color: #d7d7d7;
   font-size: 40px;
   border-radius: 50%;
   cursor: pointer;
@@ -265,7 +265,7 @@ section {
   background-color: transparent;
 }
 .navbar ul {
-  background-color: #c5c5c5;
+  background-color: #d7d7d7;
   display: flex;
   flex-direction: column; /* 'row' par défaut */
   justify-content: flex-start; /* 'center' par défaut */
@@ -293,17 +293,19 @@ section {
 }
 .navbar ul li a:hover {
   background-color: #3a3a3a;
-  color: #c5c5c5;
+  color: #d7d7d7;
   transition: 0.3s;
 }
 .navbar ul li a.active {
   background-color: #3a3a3a;
   color: rgb(255, 229, 159);
+  cursor: default;
 }
 @media (min-width: 769px) {
   .navbar {
     position: relative;
     z-index: 0;
+    height: 100%;
     padding: 0 0;
     width: inherit;
     overflow: visible;
@@ -312,50 +314,47 @@ section {
     width: inherit;
   }
   .navbar ul {
+    background-color: transparent;
     display: flex;
     flex-direction: row; /* 'row' par défaut */
     justify-content: space-evenly; /* 'center' par défaut */
     align-items: center; /* 'stretch' par défaut */
-    gap: 50px;
-    padding: 0 20px;
     min-width: inherit;
   }
   .navbar ul li {
     padding: 0 0;
     width: inherit;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row; /* 'row' par défaut */
+    justify-content: center; /* 'center' par défaut */
+    align-items: center; /* 'stretch' par défaut */
   }
   .navbar ul li a {
     display: flex;
     flex-direction: row; /* 'row' par défaut */
     justify-content: center; /* 'center' par défaut */
     align-items: center; /* 'stretch' par défaut */
-    padding: 0 0;
+    text-wrap: nowrap;
+    padding: 13.3333333333px 20px;
     font-size: 16px;
     font-weight: 100;
+    color: #d7d7d7;
   }
   .navbar ul li a:hover {
-    background-color: transparent;
-    color: rgba(58, 58, 58, 0.5);
+    background-color: #d7d7d7;
+    color: #3a3a3a;
   }
   .navbar ul li a.active {
-    background-color: inherit;
-    color: #3a3a3a;
+    background-color: #3a3a3a;
+    color: rgb(255, 229, 159);
     position: relative;
-  }
-  .navbar ul li a.active::before {
-    content: "";
-    position: absolute;
-    bottom: -10px;
-    height: 4px;
-    border-radius: 50%;
-    width: 200%;
-    background: linear-gradient(to right, transparent, rgb(255, 229, 159), transparent);
-    box-shadow: 0 0 5px rgb(255, 229, 159);
   }
 }
 
 header {
-  background-color: #c5c5c5;
+  background-color: rgba(58, 58, 58, 0.5);
   color: #3a3a3a;
   display: flex;
   flex-direction: row; /* 'row' par défaut */
@@ -374,10 +373,21 @@ header .logo {
   align-items: center; /* 'stretch' par défaut */
 }
 header .logo span {
+  display: flex;
+  flex-direction: row; /* 'row' par défaut */
+  justify-content: center; /* 'center' par défaut */
+  align-items: center; /* 'stretch' par défaut */
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 900;
   text-transform: uppercase;
-  padding: 5px 10px;
+  color: rgb(255, 229, 159);
+  font-style: italic;
+  border: solid 3px rgb(255, 229, 159);
+  background-color: #3a3a3a;
+  height: 45px;
+  width: 45px;
+  border-radius: 50% 0 50% 50%;
+  opacity: 0.8;
 }
 @media (min-width: 769px) {
   header {
@@ -385,23 +395,9 @@ header .logo span {
     flex-direction: row; /* 'row' par défaut */
     justify-content: space-between; /* 'center' par défaut */
     align-items: center; /* 'stretch' par défaut */
-    padding-bottom: 10px;
-  }
-  header .underline {
-    position: absolute;
-    bottom: 6px;
-    left: 0;
-    right: 0;
-    z-index: -1;
-    height: 1px;
-    width: calc(100% - 40px);
-    border-radius: 50%;
-    margin: 0 auto;
-    background-color: rgba(58, 58, 58, 0.5);
   }
   header .logo span {
-    font-size: 16px;
-    padding: 5px 20px;
+    margin: 0 20px;
   }
 }
 
@@ -442,7 +438,7 @@ footer .infos ul li a {
   font-size: 14px;
   text-decoration: none;
   transition: 0.3s;
-  color: #c5c5c5;
+  color: #d7d7d7;
 }
 footer .infos ul li a:hover {
   color: white;
@@ -458,7 +454,7 @@ footer .infos ul .sous_titres {
 footer .copyright {
   text-align: center;
   font-size: 14px;
-  color: #c5c5c5;
+  color: #d7d7d7;
 }
 @media (min-width: 769px) {
   footer .infos {
@@ -472,7 +468,7 @@ footer .copyright {
 }
 
 #homePage {
-  background-color: #c5c5c5;
+  background-color: #d7d7d7;
   position: relative;
   z-index: 1;
   min-height: 100vh;
@@ -496,15 +492,25 @@ footer .copyright {
   display: flex;
   flex-direction: column; /* 'row' par défaut */
   justify-content: center; /* 'center' par défaut */
-  align-items: flex-start; /* 'stretch' par défaut */
+  align-items: center; /* 'stretch' par défaut */
   width: 100%;
   flex: 2;
   overflow: hidden;
   padding: 0 10px;
 }
+#homePage #section_hero .intitule .h2_box h2:nth-child(1) {
+  font-size: min(150px, 16vw);
+}
+#homePage #section_hero .intitule .h2_box h2:nth-child(2) {
+  font-size: min(150px, 9vw);
+}
+#homePage #section_hero .intitule .h2_box h2:nth-child(3) {
+  font-size: min(150px, 16vw);
+}
 #homePage #section_hero .intitule .h2_box h2 {
   color: rgb(255, 229, 159);
   font-size: min(100px, 9vw);
+  line-height: 1;
   line-height: 1;
   text-transform: uppercase;
   font-weight: 24px;
@@ -611,7 +617,6 @@ footer .copyright {
   text-shadow: 0 0px 5px red;
 }
 #homePage .gallery_projects .list_gallery .gallery_img .infos {
-  border: solid 1px #3a3a3a;
   -webkit-backdrop-filter: blur(2px);
           backdrop-filter: blur(2px);
   position: absolute;

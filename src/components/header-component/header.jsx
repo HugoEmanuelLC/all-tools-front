@@ -4,12 +4,12 @@ function Header() {
     return (
         <header className='sticky'>
             <div className="logo">
-                <span>hugoclavinas</span>
+                <span>HLC</span>
             </div>
 
             <Navbar />
 
-            <span className='underline'></span>
+            {/* <span className='underline'></span> */}
         </header>
     )
 }

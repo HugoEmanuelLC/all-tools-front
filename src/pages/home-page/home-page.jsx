@@ -66,28 +66,42 @@ function Home() {
 
                         <div className="box_list">
                             <ul>
-                                <li className="titreList">What I do?</li>
-                                <li>Front-End Development (HTML, CSS, JavaScript)</li>
-                                <li>Back-End Development (Node.js, PHP)</li>
-                                <li>Content Management Systems (CMS) Development</li>
-                                <li>API Development and Integration</li>
-                                <li>Responsive Web Design (Mobile-First)</li>
+                                <li className="titreList">Á propos</li>
+                                <li>Je m'appelle Hugo Lopes Clavinas, et depuis 2020, je me suis lancé dans une reconversion professionnelle passionnante: le développement web et d'applications.</li>
+                                <li>je suis animé par la volonté de créer des solutions digitales innovantes et performantes.</li>
                             </ul>
-                            
+
                             <ul>
-                                <li className="titreList">Why do I do it?</li>
-                                <li>To empower businesses with a strong online presence.</li>
-                                <li>To create user-friendly and accessible web experiences.</li>
-                                <li>To help clients achieve their business goals through effective web solutions.</li>
+                                <li className="titreList">parcours</li>
+                                <li>Après une première partie de carrière dans [domaine précédent], j'ai décidé de me tourner vers le développement web, un domaine qui me passionne depuis longtemps.</li>
+                                <li>J'ai suivi une formation intensive et continue de me perfectionner au quotidien, en explorant les dernières technologies et en réalisant des projets concrets.</li>
                             </ul>
-                            
+
                             <ul>
-                                <li className="titreList">How do I do it?</li>
-                                <li>Agile Development Methodology</li>
-                                <li>User-Centered Design</li>
-                                <li>Collaborative Approach with Clients</li>
-                                <li>Thorough Testing and Quality Assurance</li>
-                                <li>Focus on Performance and Security</li>
+                                <li className="titreList">competences</li>
+                                <li>Je suis compétent dans le développement de sites web et d'applications, avec une expertise particulière dans les technologies suivantes:</li>
+                                <li>Front-End Development (HTML, CSS, JavaScript, React js)</li>
+                                <li>Back-End Development (Node js / Express js, PHP)</li>
+                                <li>Base de données (MySQL, Mongodb)</li>
+                                <li>Autres (GitHub, DNS)</li>
+                            </ul>
+
+                            <ul>
+                                <li className="titreList">projets</li>
+                                <li>J'ai déjà réalisé plusieurs projets, des sites web vitrines, applications web, applications mobiles, API's, qui m'ont permis de mettre en pratique mes compétences et de développer mon expérience.</li>
+                                <li>Vous pouvez consulter mon portfolio pour en savoir plus sur mes réalisations.</li>
+                            </ul>
+
+                            <ul>
+                                <li className="titreList">motivations</li>
+                                <li>Je suis convaincu que le développement web est un outil puissant pour créer des solutions qui facilitent la vie des gens et qui contribuent à améliorer le monde.</li>
+                                <li>Je suis passionné par l'idée de pouvoir utiliser mes compétences pour réaliser des projets qui ont un impact positif.</li>
+                            </ul>
+
+                            <ul>
+                                <li className="titreList">objectifs</li>
+                                <li>Je suis à la recherche de nouvelles opportunités pour mettre mes compétences au service de projets ambitieux et stimulants.</li>
+                                <li>Je suis ouvert aux collaborations et aux défis, et je suis toujours prêt à apprendre et à me dépasser.</li>
                             </ul>
                             
                             <ul>

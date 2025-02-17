@@ -1,7 +1,7 @@
 @import './components/navbar-component/navbar-styles';
 
 header{
-    background-color: $color_primary;
+    background-color: $color_tertiary_opo;
     color: $color_tertiary;
     @include flex(row, center, center);
     position: sticky;
@@ -17,37 +17,51 @@ header{
         @include flex(row, center, center);
 
         span{
+            @include flex(row, center, center);
+            // margin: 0 $padding_sm;
+
             font-size: $txt_h3_size_sm;
-            font-weight: $txt_weight_md;
+            font-weight: $txt_weight_lg;
             text-transform: uppercase;
-            padding: 5px $padding_sm;
+            // padding: 5px $padding_sm;
+            color: $color_secondary;
+            font-style: italic;
+            // font-family:Georgia, 'Times New Roman', Times, serif;
+
+            border: solid 3px $color_secondary;
+            background-color: $color_tertiary;
+            $taille: 45px;
+            height: $taille;
+            width: $taille;
+            border-radius: 50% 0 50% 50%;
+            opacity: 0.8;
         }
     }
 
     @include media-queries(md){
         @include flex(row, space-between, center);
 
-        padding-bottom: 10px;
+        // padding-bottom: 10px;
         // border: solid 2px red;
         
-        .underline{
-            position: absolute;
-                bottom: 6px;
-                left: 0;
-                right: 0;
-                z-index: -1;
-            height: 1px;
-            width: calc(100% - $padding_md*2);
-            border-radius: 50%;
-            margin: 0 auto;
-            background-color: $color_tertiary_opo;
-        }
+        // .underline{
+        //     position: absolute;
+        //         bottom: 6px;
+        //         left: 0;
+        //         right: 0;
+        //         z-index: -1;
+        //     height: 1px;
+        //     width: calc(100% - $padding_md*2);
+        //     border-radius: 50%;
+        //     margin: 0 auto;
+        //     background-color: $color_tertiary_opo;
+        // }
 
         .logo{
             span{
-                font-size: $txt_p_size_md;
-                // font-weight: $txt_weight_sm;
-                padding: 5px $padding_md;
+                // font-size: $txt_h3_size_md;
+                // font-weight: $txt_weight_lg;
+                margin: 0 $padding_md;
             }
         }
     }
