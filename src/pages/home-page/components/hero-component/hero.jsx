@@ -4,7 +4,7 @@ import {useEffect, useState} from 'react';
 import fondEcran from '/home/fondEcran.webp';
 import bg2 from '/home/bg2.webp';
 
-// import front from '/home/front.webp';
+import front from '/home/front.webp';
 
 
 function Hero() {
@@ -12,7 +12,7 @@ function Hero() {
 
     useEffect(() => {
 
-        loadingImage == null ? setLoadingImage({bg2, fondEcran}) : null;
+        loadingImage == null ? setLoadingImage({bg2, fondEcran, front}) : null;
 
     }, [loadingImage])
 
@@ -41,9 +41,9 @@ function Hero() {
                 <div className="box_shadow"></div>
             </div>
 
-            {/* <div className="box_space " style={loadingImage?.front ? {"backgroundImage": "url('"+loadingImage.front+"')"} : {}}>
+            <div className="box_space " style={loadingImage?.front ? {"backgroundImage": "url('"+loadingImage?.front+"')"} : {}}>
                 <div className="box_shadow"></div>
-            </div> */}
+            </div>
         </section>
 
         {/* <section className="section_box_space">

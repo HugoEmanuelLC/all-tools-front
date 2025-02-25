@@ -15,8 +15,8 @@
     .list_gallery{
         // border: solid 3px green;
         @include flex(column, center, center);
-        gap: 10px;
-        padding: 5px 0;
+        // gap: 10px;
+        // padding: 5px 0;
         width: 100%;
         height: 100%;
 
@@ -30,12 +30,13 @@
 
         .gallery_img{
             // border: solid 3px yellow;
-            height: 40vh;
+            height: 45vh;
             width: 100%;
             overflow: hidden;
             position: relative;
 
             .bckg_img{
+                // border: solid 3px red;
                 background-repeat: no-repeat;
                 background-size: cover;
                 background-position: center;
@@ -89,6 +90,7 @@
                     font-size: $txt_p_size_md;
                     font-weight: $txt_weight_lg;
                     padding: 5px 10px;
+                    margin-bottom: 20px;
                     text-transform: uppercase;
                     transition: 0.3s;
                     cursor: pointer;

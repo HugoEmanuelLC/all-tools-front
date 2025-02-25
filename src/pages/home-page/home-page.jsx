@@ -71,15 +71,15 @@ function Home() {
 
                             <ul data-aos="zoom-out-up">
                                 <li className="titreList">parcours</li>
-                                <li>Après une première partie de carrière dans [domaine précédent], j'ai décidé de me tourner vers le développement web, un domaine qui me passionne depuis longtemps.</li>
-                                <li>J'ai suivi une formation intensive et continue de me perfectionner au quotidien, en explorant les dernières technologies et en réalisant des projets concrets.</li>
+                                <li>Après une première partie de carrière comme Électricien, j'ai décidé de me tourner vers le développement web, un domaine qui me passionne depuis longtemps.</li>
+                                <li>Une premier formation d'introduction et une deuxieme en developement j'ai suivi une formation intensive et continue de me perfectionner au quotidien, en explorant les dernières technologies et en réalisant des projets concrets.</li>
                             </ul>
 
                             <ul data-aos="zoom-out-up">
                                 <li className="titreList">competences</li>
-                                <li>Je suis compétent dans le développement de sites web et d'applications, avec une expertise particulière dans les technologies suivantes:</li>
-                                <li>Front-End Development (HTML, CSS, JavaScript, React js)</li>
-                                <li>Back-End Development (Node js / Express js, PHP)</li>
+                                <li>Je suis compétent dans le développement de sites et d'applications web, avec une expertise particulière dans les technologies suivantes:</li>
+                                <li>Développement Front-End (HTML, CSS, JavaScript, React js)</li>
+                                <li>Développement Back-End (Node js / Express js, PHP)</li>
                                 <li>Base de données (MySQL, Mongodb)</li>
                                 <li>Autres (GitHub, DNS)</li>
                             </ul>
@@ -87,7 +87,7 @@ function Home() {
                             <ul data-aos="zoom-out-up">
                                 <li className="titreList">projets</li>
                                 <li>J'ai déjà réalisé plusieurs projets, des sites web vitrines, applications web, applications mobiles, API's, qui m'ont permis de mettre en pratique mes compétences et de développer mon expérience.</li>
-                                <li>Vous pouvez consulter mon portfolio pour en savoir plus sur mes réalisations.</li>
+                                <li>Vous pouvez consulter mon portfolio pour en savoir plus sur mes dernières réalisations.</li>
                             </ul>
 
                             <ul data-aos="zoom-out-up">
@@ -105,7 +105,7 @@ function Home() {
                             <ul data-aos="zoom-out-up">
                                 <li className="titreList">Location</li>
                                 <li>province: brabant wallon</li>
-                                <li>city: Braine-L'Alleud</li>
+                                <li>ville: Braine-L'Alleud</li>
                             </ul>
                         </div>
                     </div>
@@ -121,7 +121,7 @@ function Home() {
                 </section>
 
 
-                <div className="div5px"></div>
+                {/* <div className="div5px"></div> */}
 
 
                 <Gallery_projects>
@@ -141,8 +141,8 @@ function Home() {
                     <Project_item>{{
                         imgTab: [bckg_wawmomo, bckg_wawmomo_dash],
                         title: "restaurant - WAWMOMO",
-                        description: `Développement d'un site web dynamique avec dashboard de gestion de données pour un restaurant, 
-                        utilisant React js pour l'interface utilisateur, Node js / Express js pour le backend et MySQL pour la base de données. 
+                        description: `Développement d'un site web dynamique avec CMS, système de gestion de contenu (dashboard), pour un restaurant, 
+                        utilisant React js (vite) pour l'interface utilisateur, Node js / Express js pour le backend et MySQL pour la base de données. 
                         Ce projet offre une solution complète pour la visualisation et le contrôle des données, 
                         avec une architecture robuste et évolutive.`,
                         btnOrTagA: "button",
@@ -155,7 +155,7 @@ function Home() {
                     }}</Project_item>
                 </Gallery_projects>
 
-                <div className="div5px"></div>
+                {/* <div className="div5px"></div> */}
                 
 
                 {/* <AboutComponent /> */}
