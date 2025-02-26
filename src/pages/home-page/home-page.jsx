@@ -141,7 +141,7 @@ function Home() {
                     <Project_item>{{
                         imgTab: [bckg_wawmomo, bckg_wawmomo_dash],
                         title: "restaurant - WAWMOMO",
-                        description: `Développement d'un site web dynamique avec CMS, système de gestion de contenu (dashboard), pour un restaurant, 
+                        description: `En cours de développement d'un site web dynamique avec CMS, système de gestion de contenu (dashboard), pour un restaurant, 
                         utilisant React js (vite) pour l'interface utilisateur, Node js / Express js pour le backend et MySQL pour la base de données. 
                         Ce projet offre une solution complète pour la visualisation et le contrôle des données, 
                         avec une architecture robuste et évolutive.`,

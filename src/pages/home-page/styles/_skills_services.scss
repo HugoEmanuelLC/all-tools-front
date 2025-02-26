@@ -37,6 +37,7 @@
             width: 100%;
             padding: $padding;
             gap: 20px;
+            overflow: hidden;
 
             ul{
                 @include flex(column, flex-start, center);

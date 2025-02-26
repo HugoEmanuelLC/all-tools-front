@@ -383,9 +383,8 @@ header .logo span {
   flex-direction: row; /* 'row' par défaut */
   justify-content: center; /* 'center' par défaut */
   align-items: center; /* 'stretch' par défaut */
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 900;
-  text-transform: uppercase;
   color: rgb(255, 229, 159);
   font-style: italic;
   border: solid 3px rgb(255, 229, 159);
@@ -404,7 +403,7 @@ header .logo span {
     align-items: center; /* 'stretch' par défaut */
   }
   header .logo {
-    margin: 0 20px;
+    margin: 0 40px;
   }
 }
 header .displayNone {
@@ -729,6 +728,7 @@ footer .copyright {
   width: 100%;
   padding: 20px;
   gap: 20px;
+  overflow: hidden;
 }
 #homePage #skills_services .container .box_list ul {
   display: flex;

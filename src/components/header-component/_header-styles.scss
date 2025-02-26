@@ -21,9 +21,9 @@ header{
             @include flex(row, center, center);
             // margin: 0 $padding_sm;
 
-            font-size: $txt_h3_size_sm;
+            font-size: 14px;
             font-weight: $txt_weight_lg;
-            text-transform: uppercase;
+            // text-transform: uppercase;
             // padding: 5px $padding_sm;
             color: $color_secondary;
             font-style: italic;
@@ -61,7 +61,7 @@ header{
         // }
 
         .logo{
-            margin: 0 $padding_md;
+            margin: 0 40px;
             // span{
                 // font-size: $txt_h3_size_md;
                 // font-weight: $txt_weight_lg;
