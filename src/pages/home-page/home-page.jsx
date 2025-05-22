@@ -145,13 +145,10 @@ function Home() {
                         utilisant React js (vite) pour l'interface utilisateur, Node js / Express js pour le backend et MySQL pour la base de données. 
                         Ce projet offre une solution complète pour la visualisation et le contrôle des données, 
                         avec une architecture robuste et évolutive.`,
-                        btnOrTagA: "button",
-                        linkTxt: "en savoir plus",
-                        linkHref: "https://wawmomo.be",
-                        fnc: () => alert(`
-                            La nouvelle version du site web 
-                            est en cours de développement !
-                        `)
+                        btnOrTagA: "a",
+                        linkTxt: "visiter le site",
+                        linkHref: "https://www.wawmomo.be",
+                        fnc: () => {}
                     }}</Project_item>
                 </Gallery_projects>
 
